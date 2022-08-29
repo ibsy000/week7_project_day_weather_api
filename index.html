@@ -10,10 +10,61 @@
         <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         <title>Current Weather API</title>
     </head>
-    <body>
-        <h1>Testing Testing 1 2 3</h1>
+    <body style="background-image:url(/images/pexels-photo-7501536.jpeg); 
+        background-position: center; background-repeat: no-repeat;">
+        <!-- Navbar goes here -->
+        <nav class="navbar navbar-light bg-warning d-flex">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand">
+                    <img src="/images/sun icon.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    It's so hot that when I saw a heatwave, I waved back.
+                    <img src="/images/sun icon.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                </a>
+            </div>
+        </nav>
+        <!-- Container goes here -->
+        <div class="container">
+
+            <h1 class="text-center mt-5">How's The Weather Up There?</h1>
+
+            <div class="row">
+                <form action="" id="weatherForm">
+                    <div class="row">
+                        <input type="text" name="cityName" id="cityName" 
+                            class="form-control my-4" placeholder="Enter City Name">
+                        <input type="submit" value="Submit" class="btn btn-dark">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Insert Weather API info here as a card -->
+            <div class="row text-center justify-content-center mt-5" id="weatherCard">
+
+                <!-- <div class="card" style="width: 25rem;">
+
+                    <div class="card-body">
+                        <h1 class="card-title display-6"><b>Branson</b></h1>
+                        <img src="http://openweathermap.org/img/wn/01d@2x.png" 
+                            class="card-img" style="height: 100px; width: 100px;">
+                        <h1 class="card-text display-4"><b>85&deg;</b></h1>
+                        <h4 class="card-text">Sunny</h4>
+                        <p class="card-text">Sun Aug 28 2022 19:25:33 GMT-0500 (Central Daylight Time)</p>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h5">H: 90&deg; L: 66&deg;</li>
+                        <li class="list-group-item h5">Feels like: 86&deg;</li>
+                        <li class="list-group-item h5">Humidity: 61%</li>
+                    </ul>
+
+                </div> -->
+
+            </div>
+
+        </div>
 
 
+        <script src="/js/apiKey.js"></script>
         <script src="/js/main.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
