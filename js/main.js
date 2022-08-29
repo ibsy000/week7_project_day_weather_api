@@ -9,6 +9,7 @@
         let inputCity = event.target.cityName.value
         let weather = await getWeatherData(inputCity)
         buildWeatherCard(weather)
+        changeBackground(weather)
         cityName.value = ''
     }
 
@@ -109,7 +110,18 @@
     }
     // End of buildWeatherCard function
 
-
+    function changeBackground(weatherData){
+        var body = document.getElementById('weatherBody')
+        if (weatherData.weather[0].main === 'Rain' || weatherData.weather[0].main === 'Drizzle'){
+            body.style.backgroundImage = 'url(/images/rain2.jpeg)'
+        } else if (weatherData.weather[0].main === 'Clouds'){
+            body.style.backgroundImage = 'url(/images/cloudy2.jpeg)'
+        } else if (weatherData.weather[0].main === 'Thunderstorm'){
+            body.style.backgroundImage = 'url(/images/thunderstorm.jpeg)'
+        } else if (weatherData.weather[0].main === 'Clear'){
+            body.style.backgroundImage = 'url(/images/clear-sky.jpeg)'
+        }
+    }
 
     form.addEventListener('submit', handleSubmit)
 }
